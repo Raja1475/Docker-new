@@ -5,7 +5,7 @@ FROM mysql:latest
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes \
     MYSQL_DATABASE=cities  \
     MYSQL_USER=shipping  \
-    MYSQL_PASSWORD=Raja@123
+    MYSQL_PASSWORD=RoboShop@1
 # Copy optional SQL initialization scripts
 COPY scripts/* /docker-entrypoint-initdb.d/
 
