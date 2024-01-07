@@ -2,7 +2,8 @@
 FROM mysql:latest
 
 # Environment variables: Customizable for different setups
-ENV MYSQL_DATABASE=cities  \
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes \
+    MYSQL_DATABASE=cities  \
     MYSQL_USER=shipping  \
     MYSQL_PASSWORD=Raja@123
 # Copy optional SQL initialization scripts
