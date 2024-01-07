@@ -8,6 +8,3 @@ ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes \
     MYSQL_PASSWORD=RoboShop@1
 # Copy optional SQL initialization scripts
 COPY scripts/* /docker-entrypoint-initdb.d/
-
-# Expose port for external access
-EXPOSE 3306
