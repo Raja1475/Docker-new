@@ -7,15 +7,17 @@
 # ENV MONGO=true
 # CMD [ "node", "server.js" ]
 
-FROM node:latest AS build
+# Stage 1: Build stage
+FROM node:14 AS build
 WORKDIR /app
 COPY package.json .
-COPY server.js .
+COPY . .
 RUN npm install
 
-
-FROM node:alpine
+# Stage 2: Production stage
+FROM node:14-alpine
 WORKDIR /app
-COPY --from=build /app/dist /app
-EXPOSE 8080
+COPY --from=build /app . 
+RUN npm install
 CMD ["node", "server.js"]
+
