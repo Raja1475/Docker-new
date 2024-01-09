@@ -16,6 +16,7 @@ RUN npm install
 
 # Stage 2: Production stage
 FROM node:14-alpine
+EXPOSE 8080
 WORKDIR /app
 COPY --from=build /app . 
 RUN npm install
