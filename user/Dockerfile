@@ -19,5 +19,6 @@ FROM node:14-alpine
 WORKDIR /app
 COPY --from=build /app . 
 RUN npm install
+ENV MONGO=true
 CMD ["node", "server.js"]
 
