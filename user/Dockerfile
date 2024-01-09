@@ -10,9 +10,9 @@
 FROM node:latest AS build
 WORKDIR /app
 COPY package.json .
-RUN npm install
 COPY server.js .
-RUN npm run build
+RUN npm install
+
 
 FROM node:alpine
 WORKDIR /app
