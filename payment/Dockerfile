@@ -1,6 +1,8 @@
 # Use the Python 3.9 slim image as the base image
 FROM python:3.9-slim
 
+EXPOSE 8080
+
 # Install build essentials for compiling Python packages
 RUN apt-get update && apt-get install -y build-essential
 
