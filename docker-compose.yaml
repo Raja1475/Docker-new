@@ -37,7 +37,7 @@ services:
       - catalogue
       - redis
   user:
-    image: rajakuma/user:v2
+    image: rajakuma/user:v1
     container_name: user
     networks:
       - roboshop
