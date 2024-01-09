@@ -12,8 +12,7 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code files
-COPY payment.py payment.py
-COPY rabbitmq.py rabbitmq.py
+COPY . .
 
 # Set environment variables for connecting to RabbitMQ
 ENV AMQP_USER=roboshop \
