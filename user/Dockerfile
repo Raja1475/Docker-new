@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-alpine3.19
 EXPOSE 8080
 WORKDIR /app
 COPY package.json .
