@@ -1,5 +1,5 @@
 # Base image: Official MySQL image, latest version
-FROM mysql:mysql:5.7
+FROM mysql:5.7
 
 # Environment variables: Customizable for different setups
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes \
