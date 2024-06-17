@@ -35,6 +35,12 @@ services:
     depends_on:
     - redis
     - catalogue 
+  mysql:
+    image: raja1475/mysql:k1
+    container_name: mysql
+    networks:
+      - roboshop
+      
   web:
     image: raja1475/web:k1
     container_name: web
