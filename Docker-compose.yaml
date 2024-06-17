@@ -27,6 +27,14 @@ services:
     depends_on:
       - mongodb
       - redis
+  cart:
+    image: raja1475/cart:k1
+    container_name: cart
+    networks:
+    - roboshop
+    depends_on:
+    - redis
+    - catalogue 
   web:
     image: raja1475/web:k1
     container_name: web
