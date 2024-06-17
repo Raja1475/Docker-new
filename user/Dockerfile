@@ -6,7 +6,5 @@ COPY package.json .
 COPY server.js .
 RUN npm install
 USER roboshop
-ENV USER_SERVER_PORT=8080
-ENV REDIS_HOST=redis
-ENV MONGO_URL=mongodb://mongodb:27017/users
+ENV MONGO=true
 CMD ["node", "server.js"]
